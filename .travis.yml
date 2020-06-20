@@ -6,4 +6,4 @@ before_install:
   - docker build -t hunt825a/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run hunt825a/docker-react npm run test -- --coverage
+  - docker run -e CI=true hunt825a/docker-react npm run test -- --coverage
